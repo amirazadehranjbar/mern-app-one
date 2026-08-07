@@ -11,7 +11,10 @@ const notesRoutes = require("./routes/notesRoute");
 
 const app = express();
 
-app.use("/api/notes", notesRoutes);
+// middleware
+app.use(express.json());
+
+app.use("/api/notes", notesRoutes)
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
