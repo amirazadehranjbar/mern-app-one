@@ -39,7 +39,10 @@ const noteUpdateRoute = async (req, res) => {
         const id = req.params.id;
         const {title, description} = req.body;
 
-        const updatedNote = await noteModel.findOneAndUpdate({_id: id}, {$set: {title, description}}, {new: true});
+        const updatedNote = await noteModel.findOneAndUpdate({_id: id}, {$set: {title, description}}, {
+            returnDocument:"after",
+            runValidators: true
+        });
 
         return res.status(201).json({message: "note updated successfully", data: updatedNote});
 
