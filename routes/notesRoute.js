@@ -3,9 +3,10 @@ const express = require("express");
 
 const notesRoutes = express.Router();
 
-notesRoutes.get("/", noteController.getAllNotesRoutes);
+notesRoutes.get("/", noteController.getAllNotesRoute);
 
-notesRoutes.post("/", noteController.createNotesRoutes);
+notesRoutes.post("/", noteController.createNotesRoute);
 
+notesRoutes.put("/:id", noteController.noteUpdateRoute);
 
 module.exports = notesRoutes;

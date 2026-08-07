@@ -1,6 +1,6 @@
 const {noteModel} = require("../models/noteModel");
 
-const getAllNotesRoutes = async (req, res) => {
+const getAllNotesRoute = async (req, res) => {
     try {
         const notes = await noteModel.find({})
         return res.status(200).json({message: "success", data: notes})
@@ -11,7 +11,7 @@ const getAllNotesRoutes = async (req, res) => {
 }
 
 
-const createNotesRoutes = async (req, res) => {
+const createNotesRoute = async (req, res) => {
     try {
 
         const {title, description} = req.body;
@@ -33,14 +33,22 @@ const createNotesRoutes = async (req, res) => {
     }
 }
 
-const noteUpdate = async (req, res) => {
+const noteUpdateRoute = async (req, res) => {
 
-    const id = req.params.id;
-    const {title, description} = req.body;
+    try {
+        const id = req.params.id;
+        const {title, description} = req.body;
 
-    const updatedNote = await noteModel.update({title, description}, {new: true})
+        const updatedNote = await noteModel.findOneAndUpdate({_id: id}, {$set: {title, description}}, {new: true});
+
+        return res.status(201).json({message: "note updated successfully", data: updatedNote});
+
+    } catch (e) {
+        console.error(e);
+        return res.status(500).json({message: "error in updateNotes"});
+    }
 
 }
 
 
-module.exports.noteController = {getAllNotesRoutes, createNotesRoutes};
+module.exports.noteController = {getAllNotesRoute, createNotesRoute, noteUpdateRoute};
