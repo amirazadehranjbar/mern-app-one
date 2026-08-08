@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1edd7da1-2f3a-4443-a5fa-0e0f83b8ab99" name="Changes" comment="add frontend folder : add pages part-1">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/NavBar.jsx" afterDir="false" />
+    <list default="true" id="1edd7da1-2f3a-4443-a5fa-0e0f83b8ab99" name="Changes" comment="frontend : add NavBar">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/HomePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/HomePage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/NavBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/NavBar.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +103,7 @@
       <workItem from="1786161902554" duration="5635000" />
       <workItem from="1786169103673" duration="18000" />
       <workItem from="1786169128974" duration="1026000" />
-      <workItem from="1786194707825" duration="3566000" />
+      <workItem from="1786194707825" duration="5914000" />
     </task>
     <task id="LOCAL-00001" summary="note routes : add update note route">
       <option name="closed" value="true" />
@@ -165,7 +161,23 @@
       <option name="project" value="LOCAL" />
       <updated>1786170140020</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="frontend : add theme changer">
+      <option name="closed" value="true" />
+      <created>1786198499445</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1786198499445</updated>
+    </task>
+    <task id="LOCAL-00009" summary="frontend : add NavBar">
+      <option name="closed" value="true" />
+      <created>1786199445393</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1786199445393</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,6 +191,8 @@
     <MESSAGE value="add frontend folder : npm i" />
     <MESSAGE value="add frontend folder : installed tailwind css" />
     <MESSAGE value="add frontend folder : add pages part-1" />
-    <option name="LAST_COMMIT_MESSAGE" value="add frontend folder : add pages part-1" />
+    <MESSAGE value="frontend : add theme changer" />
+    <MESSAGE value="frontend : add NavBar" />
+    <option name="LAST_COMMIT_MESSAGE" value="frontend : add NavBar" />
   </component>
 </project>

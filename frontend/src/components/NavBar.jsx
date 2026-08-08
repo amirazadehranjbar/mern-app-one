@@ -1,6 +1,11 @@
+import {Link} from "react-router";
+
 function NavBar() {
     return (
         <div className="navbar bg-base-100 shadow-sm">
+
+
+            {/*region navbar-start*/}
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -13,9 +18,11 @@ function NavBar() {
                     <ul
                         tabIndex="-1"
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        <li><a>Item 1</a></li>
                         <li>
-                            <a>Parent</a>
+                            <a>Item 1</a>
+                        </li>
+                        <li>
+                            <span>Parent</span>
                             <ul className="p-2">
                                 <li><a>Submenu 1</a></li>
                                 <li><a>Submenu 2</a></li>
@@ -26,6 +33,10 @@ function NavBar() {
                 </div>
                 <a className="btn btn-ghost text-xl">daisyUI</a>
             </div>
+            {/*endregion*/}
+
+
+            {/*region navbar-center*/}
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     <li><a>Item 1</a></li>
@@ -38,19 +49,25 @@ function NavBar() {
                             </ul>
                         </details>
                     </li>
+                    <li><Link to="/create-note">create note</Link></li>
                     <li><a>Item 3</a></li>
                 </ul>
             </div>
+            {/*endregion*/}
+
+
+            {/*region navbar-end*/}
             <div className="navbar-end">
 
-                    <select data-choose-theme className="select w-1/5">
-                        <option value="light">Light</option>
-                        <option value="dark">Dark</option>
-                        <option value="dracula">Dracula</option>
-                        <option value="forest">Forest</option>
-                    </select>
+                <select data-choose-theme className="select w-1/5">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                    <option value="dracula">Dracula</option>
+                    <option value="forest">Forest</option>
+                </select>
 
             </div>
+            {/*endregion*/}
         </div>
     )
 }
