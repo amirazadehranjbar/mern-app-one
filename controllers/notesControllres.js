@@ -2,7 +2,7 @@ const {noteModel} = require("../models/noteModel");
 
 const getAllNotesRoute = async (req, res) => {
     try {
-        const notes = await noteModel.find({})
+        const notes = await noteModel.find({}).sort({createdAt: -1})
         return res.status(200).json({message: "success", data: notes})
     } catch (e) {
         console.error(e);
@@ -10,6 +10,17 @@ const getAllNotesRoute = async (req, res) => {
     }
 }
 
+const getNoteById = async (req, res) => {
+    try {
+        const id = req.params.id;
+        const note = await noteModel.findById(id)
+        if (!note) return res.status(404).json({message: "not found"});
+        return res.status(200).json({message: "note found"});
+    } catch (e) {
+        console.error(e);
+        return res.status(500).json({message: "error"});
+    }
+}
 
 const createNotesRoute = async (req, res) => {
     try {
@@ -40,7 +51,7 @@ const noteUpdateRoute = async (req, res) => {
         const {title, description} = req.body;
 
         const updatedNote = await noteModel.findOneAndUpdate({_id: id}, {$set: {title, description}}, {
-            returnDocument:"after",
+            returnDocument: "after",
             runValidators: true
         });
 
@@ -53,5 +64,16 @@ const noteUpdateRoute = async (req, res) => {
 
 }
 
+const deleteNotesRoute = async (req, res) => {
+    try {
+        const id = req.params.id;
+        await noteModel.findByIdAndDelete(id)
+        return res.status(200).json({message: "note deleted successfully"})
+    } catch (e) {
+        console.log("error in deleteNotesRoute");
+        return res.status(500).json({message: "error in deleteNotesRoute"});
+    }
+}
 
-module.exports.noteController = {getAllNotesRoute, createNotesRoute, noteUpdateRoute};
+
+module.exports.noteController = {getAllNotesRoute, createNotesRoute, noteUpdateRoute, deleteNotesRoute, getNoteById};

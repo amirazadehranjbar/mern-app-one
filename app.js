@@ -1,18 +1,20 @@
 require("dotenv").config();
-const mongoose = require("mongoose");
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const {connectDB} = require("./config/db");
+const rateLimiter = require("./middleware/rateLimiter")
 
 const PORT = process.env.PORT || 5000;
 
 const notesRoutes = require("./routes/notesRoute");
 
+
 const app = express();
 
 // middleware
 app.use(express.json());
+app.use(rateLimiter);
 
 app.use("/api/notes", notesRoutes)
 
