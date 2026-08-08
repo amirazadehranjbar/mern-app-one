@@ -1,7 +1,7 @@
-
 function HomePage() {
     return (
         <div>
+            <button className="btn">Default</button>
             home page
         </div>
     )
