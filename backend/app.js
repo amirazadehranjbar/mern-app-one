@@ -19,18 +19,19 @@ app.use(rateLimiter);
 app.use("/api/notes", notesRoutes)
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// first connect to database then application will start
+connectDB().then(() => {
+    app.listen(PORT, "0.0.0.0", (err) => {
+        if (err) {
+            console.error(err);
+        }
+        console.info("Listening on port " + PORT);
+    });
+})
 
-connectDB()
-
-app.listen(PORT ,"0.0.0.0" , (err) => {
-    if (err) {
-        console.error(err);
-    }
-    console.info("Listening on port " + PORT);
-});
 
 module.exports = app;
