@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1edd7da1-2f3a-4443-a5fa-0e0f83b8ab99" name="Changes" comment="add frontend folder : npm i">
+    <list default="true" id="1edd7da1-2f3a-4443-a5fa-0e0f83b8ab99" name="Changes" comment="add frontend folder : installed tailwind css">
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/CreateNotePage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/DetailNotePage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/HomePage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/hero.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/react.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/vite.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/vite.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +37,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="JSX File" />
       </list>
     </option>
   </component>
@@ -108,7 +103,7 @@
       <workItem from="1786117542658" duration="2873000" />
       <workItem from="1786161902554" duration="5635000" />
       <workItem from="1786169103673" duration="18000" />
-      <workItem from="1786169128974" duration="424000" />
+      <workItem from="1786169128974" duration="915000" />
     </task>
     <task id="LOCAL-00001" summary="note routes : add update note route">
       <option name="closed" value="true" />
@@ -150,7 +145,15 @@
       <option name="project" value="LOCAL" />
       <updated>1786168603777</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add frontend folder : installed tailwind css">
+      <option name="closed" value="true" />
+      <created>1786169595928</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1786169595928</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,6 +165,7 @@
     <MESSAGE value="note routes : add rate limiter middleware" />
     <MESSAGE value="add frontend folder" />
     <MESSAGE value="add frontend folder : npm i" />
-    <option name="LAST_COMMIT_MESSAGE" value="add frontend folder : npm i" />
+    <MESSAGE value="add frontend folder : installed tailwind css" />
+    <option name="LAST_COMMIT_MESSAGE" value="add frontend folder : installed tailwind css" />
   </component>
 </project>
