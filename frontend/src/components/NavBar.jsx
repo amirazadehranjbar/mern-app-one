@@ -1,4 +1,5 @@
 import {Link} from "react-router";
+import {PlusIcon} from "lucide-react";
 
 function NavBar() {
     return (
@@ -39,18 +40,12 @@ function NavBar() {
             {/*region navbar-center*/}
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <li><a>Item 1</a></li>
                     <li>
-                        <details>
-                            <summary>Parent</summary>
-                            <ul className="p-2 bg-base-100 w-40 z-1">
-                                <li><a>Submenu 1</a></li>
-                                <li><a>Submenu 2</a></li>
-                            </ul>
-                        </details>
+
+                        <Link to="/create-note" className="flex items-center justify-center">
+                            <PlusIcon className="step-icon"/>
+                            create note</Link>
                     </li>
-                    <li><Link to="/create-note">create note</Link></li>
-                    <li><a>Item 3</a></li>
                 </ul>
             </div>
             {/*endregion*/}
